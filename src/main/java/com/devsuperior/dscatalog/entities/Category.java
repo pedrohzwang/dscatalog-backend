@@ -13,6 +13,11 @@ import java.time.Instant;
 @Table(name = "tb_category")
 public class Category implements Serializable {
 
+    public Category(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Getter @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
